@@ -61,19 +61,19 @@ public abstract class Condition {
     }
 
     private static final class OperatorCondition extends Condition {
-        private String oprerator;
+        private String operator;
         private String lhs;
         private String rhs;
 
-        private OperatorCondition(String oprerator, String lhs, String rhs) {
-            this.oprerator = oprerator;
+        private OperatorCondition(String operator, String lhs, String rhs) {
+            this.operator = operator;
             this.lhs = lhs;
             this.rhs = rhs;
         }
 
         @Override
         public void appendTo(StringBuilder builder) {
-            builder.append(lhs).append(oprerator).append(rhs);
+            builder.append(lhs).append(operator).append(rhs);
         }
     }
 

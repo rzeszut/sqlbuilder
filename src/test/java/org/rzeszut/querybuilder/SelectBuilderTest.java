@@ -2,11 +2,12 @@ package org.rzeszut.querybuilder;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.rzeszut.querybuilder.Condition.*;
 import static org.rzeszut.querybuilder.SelectBuilder.select;
 
 public class SelectBuilderTest {
+
     @Test
     public void testQuery() {
         // when
@@ -65,9 +66,10 @@ public class SelectBuilderTest {
                 .where(eq("u.name", "'fgsfds'"))
                 .groupBy("u.id")
                 .orderBy("u.id")
+                .orderBy("u.name", Order.ASC)
                 .build();
 
         // then
-        assertEquals("SELECT * FROM users u INNER JOIN addresses a USING (id) WHERE u.name = 'fgsfds' GROUP BY u.id ORDER BY u.id", query);
+        assertEquals("SELECT * FROM users u INNER JOIN addresses a USING (id) WHERE u.name = 'fgsfds' GROUP BY u.id ORDER BY u.id, u.name ASC", query);
     }
 }

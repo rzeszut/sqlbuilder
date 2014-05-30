@@ -1,5 +1,4 @@
 package org.rzeszut.querybuilder;
 
-public enum Order {
-    DESC, ASC
+public final class UpdateBuilder {
 }
