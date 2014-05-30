@@ -1,0 +1,12 @@
+# target
+target
+
+# IDE files
+.idea
+*.iml
+
+# backup trash
+*~
+*.swp
+*.swo
+
