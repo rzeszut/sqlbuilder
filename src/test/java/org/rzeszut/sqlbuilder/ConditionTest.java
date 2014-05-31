@@ -1,4 +1,4 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 import org.junit.Test;
 

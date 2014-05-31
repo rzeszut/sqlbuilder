@@ -1,29 +1,24 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 import com.google.common.base.Joiner;
-import org.rzeszut.querybuilder.mixins.*;
+import org.rzeszut.sqlbuilder.mixins.*;
 
 public final class SelectBuilder implements FromBuilderSupport {
     private static final String ALL_COLUMNS = "*";
 
-    private StringBuilder builder = new StringBuilder();
+    private StringBuilder builder = new StringBuilder("SELECT ");
 
     private SelectBuilder() {}
 
     public static SelectBuilder select() {
         final SelectBuilder builder = new SelectBuilder();
-
-        builder.builder.append("SELECT ").append(ALL_COLUMNS);
-
+        builder.builder.append(ALL_COLUMNS);
         return builder;
     }
 
     public static SelectBuilder select(String... cols) {
         final SelectBuilder builder = new SelectBuilder();
-
-        builder.builder.append("SELECT ");
         Joiner.on(", ").appendTo(builder.builder, cols);
-
         return builder;
     }
 
@@ -166,12 +161,12 @@ public final class SelectBuilder implements FromBuilderSupport {
 
         public OrderByBuilder orderBy(String column) {
             addNextOrderBy(column);
-            return new OrderByBuilder();
+            return this;
         }
 
         public OrderByBuilder orderBy(String column, Order order) {
             addNextOrderBy(column, order);
-            return new OrderByBuilder();
+            return this;
         }
     }
 

@@ -1,4 +1,4 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
 public interface BaseMixin {
     StringBuilder getBuilder();

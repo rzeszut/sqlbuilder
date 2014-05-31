@@ -5,7 +5,7 @@
 >
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.rzeszut</groupId>
-    <artifactId>querybuilder</artifactId>
+    <artifactId>sqlbuilder</artifactId>
     <version>0.0.1</version>
 
     <properties>

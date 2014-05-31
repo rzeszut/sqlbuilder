@@ -1,10 +1,7 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
-import org.rzeszut.querybuilder.Condition;
+import org.rzeszut.sqlbuilder.Condition;
 
-/**
- * Created by mateusz on 30.05.14.
- */
 public interface HavingBuilderSupport extends BaseMixin {
     default void addHaving(Condition cond) {
         getBuilder().append(" HAVING ");

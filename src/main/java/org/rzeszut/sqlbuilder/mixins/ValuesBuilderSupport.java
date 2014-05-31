@@ -1,4 +1,4 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
 import com.google.common.base.Joiner;
 

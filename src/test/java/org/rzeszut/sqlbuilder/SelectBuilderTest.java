@@ -1,10 +1,10 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.rzeszut.querybuilder.Condition.*;
-import static org.rzeszut.querybuilder.SelectBuilder.select;
+import static org.rzeszut.sqlbuilder.Condition.*;
+import static org.rzeszut.sqlbuilder.SelectBuilder.select;
 
 public class SelectBuilderTest {
 

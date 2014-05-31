@@ -1,18 +1,17 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.rzeszut.querybuilder.Condition.eq;
-import static org.rzeszut.querybuilder.DeleteBuilder.delete;
+import static org.rzeszut.sqlbuilder.Condition.eq;
+import static org.rzeszut.sqlbuilder.DeleteBuilder.deleteFrom;
 
 public class DeleteBuilderTest {
 
     @Test
     public void testSimpleDelete() {
         // when
-        final String delete = delete()
-                .from("users")
+        final String delete = deleteFrom("users")
                 .build();
 
         // then
@@ -22,8 +21,7 @@ public class DeleteBuilderTest {
     @Test
     public void testDeleteWithCondition() {
         // when
-        final String delete = delete()
-                .from("users")
+        final String delete = deleteFrom("users")
                 .where(eq("id", ":id"))
                 .build();
 

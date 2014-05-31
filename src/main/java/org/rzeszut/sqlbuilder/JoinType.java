@@ -1,4 +1,4 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 public enum JoinType {
     INNER("INNER JOIN"),

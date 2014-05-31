@@ -1,6 +1,6 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
-import org.rzeszut.querybuilder.Condition;
+import org.rzeszut.sqlbuilder.Condition;
 
 public interface JoinConditionBuilderSupport extends BaseMixin {
     default void addOn(Condition cond) {

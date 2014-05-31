@@ -1,6 +1,6 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
-import org.rzeszut.querybuilder.Order;
+import org.rzeszut.sqlbuilder.Order;
 
 public interface OrderByBuilderSupport extends BaseMixin {
     default void addOrderBy(String column) {

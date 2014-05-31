@@ -1,7 +1,7 @@
-package org.rzeszut.querybuilder.mixins;
+package org.rzeszut.sqlbuilder.mixins;
 
 import com.google.common.base.Joiner;
-import org.rzeszut.querybuilder.JoinType;
+import org.rzeszut.sqlbuilder.JoinType;
 
 public interface JoinBuilderSupport extends BaseMixin {
     default void addJoin(JoinType type, String table) {

@@ -1,17 +1,16 @@
-package org.rzeszut.querybuilder;
+package org.rzeszut.sqlbuilder;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.rzeszut.querybuilder.InsertBuilder.insert;
+import static org.rzeszut.sqlbuilder.InsertBuilder.insertInto;
 
 public class InsertBuilderTest {
 
     @Test
     public void testSimpleInsert() {
         // when
-        final String insert = insert()
-                .into("users")
+        final String insert = insertInto("users")
                 .values("1", ":name")
                 .build();
 
@@ -22,8 +21,7 @@ public class InsertBuilderTest {
     @Test
     public void testInsertWithColumns() {
         // when
-        final String insert = insert()
-                .into("users")
+        final String insert = insertInto("users")
                 .columns("id", "name")
                 .values("1", ":name")
                 .build();
@@ -35,8 +33,7 @@ public class InsertBuilderTest {
     @Test
     public void testInsertWithMultipleValues() {
         // when
-        final String insert = insert()
-                .into("users")
+        final String insert = insertInto("users")
                 .columns("id", "name")
                 .values("1", ":name")
                 .values("2", ":name2")
